@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background: #fafafa;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ig-wrap {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ig-box {
+            width: 350px;
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .ig-logo {
+            font-family: 'Segoe Script', cursive;
+            font-size: 38px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .ig-sub {
+            font-size: 14px;
+            color: #8e8e8e;
+            margin-bottom: 15px;
+        }
+
+        .ig-input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 8px;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            background: #fafafa;
+        }
+
+        .ig-btn {
+            width: 100%;
+            height: 36px;
+            background: #4cb5f9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .ig-btn:hover {
+            background: #4cb5f9;
+        }
+
+        .ig-error {
+            color: red;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .ig-success {
+            color: green;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .ig-login {
+            width: 350px;
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .ig-login a {
+            text-decoration: none;
+            color: #0095f6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="ig-wrap">
+
+    <div>
+        <div class="ig-box">
+
+            <div class="ig-logo">Instagram</div>
+            <div class="ig-sub">
+                Sign up to see photos and videos from your friends.
+            </div>
+
+            <form method="post" action="http://localhost/task5/.php">
+
+                <input type="text" name="email" class="ig-input" placeholder="Mobile Number or Email">
+
+                <input type="text" name="fullname" class="ig-input" placeholder="Full Name">
+
+                <input type="text" name="username" class="ig-input" placeholder="Username">
+
+                <input type="password" name="password" class="ig-input" placeholder="Password">
+
+                <button type="submit" class="ig-btn">Sign up</button>
+
+            </form>
+
+        </div>
+
+        <div class="ig-login">
+            Have an account?
+            <a href="#">Log in</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
