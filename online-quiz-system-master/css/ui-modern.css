@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #111;
+}
+
+/* HEADER */
+.ui-header {
+  background: #000;
+  padding: 15px 40px;
+}
+.ui-logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+.ui-login-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* MAIN */
+.ui-main {
+  min-height: 100vh;
+  background: url('../images/quiz-real.jpg') center/cover no-repeat;
+  position: relative;
+}
+.ui-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+}
+.ui-center {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* LEFT INFO */
+.ui-info h1 {
+  color: #fff;
+  font-size: 42px;
+}
+.ui-info p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* CARD */
+.ui-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+.ui-card h3 {
+  text-align: center;
+  font-weight: 700;
+}
+.ui-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 20px;
+}
+.ui-card .form-control {
+  margin-bottom: 12px;
+  height: 42px;
+}
+
+/* BUTTON */
+.ui-submit {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.ui-submit:hover {
+  background: #333;
+}
