@@ -1,0 +1,17 @@
+Quizzer is an online quiz management system designed to conduct
+secure and time based quizzes for students.
+
+This platform allows users to register, login and attempt quizzes
+based on different subjects and topics.
+
+Each quiz is controlled by a timer to ensure fair evaluation
+and automatic submission once the time is over.
+
+Quizzer helps teachers and institutions to easily create quizzes,
+manage questions and evaluate results efficiently.
+
+Students can view their scores instantly after quiz completion
+and track their performance.
+
+This system is simple, fast and user friendly,
+making online assessments easy and reliable.
