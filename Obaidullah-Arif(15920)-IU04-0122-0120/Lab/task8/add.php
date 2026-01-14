@@ -9,16 +9,19 @@ if (isset($_POST['submit'])) {
     $company = $_POST['company'];
     $price = $_POST['price'];
 
-    $query = "INSERT INTO products (Name, Type, Company, Price)
-              VALUES ('$name', '$type', '$company', '$price')";
+    $stmt = mysqli_prepare(
+        $conn,
+        "INSERT INTO products (Name, Type, Company, Price) VALUES (?, ?, ?, ?)"
+    );
 
-    mysqli_query($conn, $query);
+    mysqli_stmt_bind_param($stmt, "sssd", $name, $type, $company, $price);
+    mysqli_stmt_execute($stmt);
 
     header("Location: product.php");
     exit;
-
 }
 ?>
+
 
 <h2>Add Product</h2>
 

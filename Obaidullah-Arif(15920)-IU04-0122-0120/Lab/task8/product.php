@@ -2,6 +2,17 @@
 include "db.php";
 include "header.php"; 
 
+if (isset($_GET['delete_id'])) {
+    $id = intval($_GET['delete_id']);
+
+    $stmt = mysqli_prepare($conn, "DELETE FROM products WHERE id = ?");
+    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_execute($stmt);
+
+    header("Location: product.php");
+    exit;
+}
+
 $result = mysqli_query($conn, "SELECT * FROM products");
 $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>

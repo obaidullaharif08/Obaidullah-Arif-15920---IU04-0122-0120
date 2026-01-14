@@ -7,10 +7,12 @@ if (!isset($_GET['id'])) {
     exit;
 }
 
-$id = $_GET['id'];
+$id = intval($_GET['id']);
 
-// Fetch current product data
-$result = mysqli_query($conn, "SELECT * FROM products WHERE id = $id");
+$stmt = mysqli_prepare($conn, "SELECT * FROM products WHERE id = ?");
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 $product = mysqli_fetch_assoc($result);
 
 if (!$product) {
@@ -24,12 +26,18 @@ if (isset($_POST['submit'])) {
     $company = $_POST['company'];
     $price = $_POST['price'];
 
-    mysqli_query($conn, "UPDATE products SET Name='$name', Type='$type', Company='$company', Price='$price' WHERE id=$id");
+    $update = mysqli_prepare(
+        $conn,
+        "UPDATE products SET Name=?, Type=?, Company=?, Price=? WHERE id=?"
+    );
+    mysqli_stmt_bind_param($update, "sssdi", $name, $type, $company, $price, $id);
+    mysqli_stmt_execute($update);
 
     header("Location: product.php");
     exit;
 }
 ?>
+
 
 <h2>Edit Product</h2>
 
